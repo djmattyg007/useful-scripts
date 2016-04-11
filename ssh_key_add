@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+name="$1"
+if [[ -f "$name" ]]; then
+    ssh-add "$name"
+elif [[ -f "$HOME/.ssh/id_rsa_${name}" ]]; then
+    ssh-add "$HOME/.ssh/id_rsa_${name}"
+else
+    echo "Key not found"
+    exit 1
+fi

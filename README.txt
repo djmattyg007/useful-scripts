@@ -11,6 +11,12 @@ This script runs a "task" playbook. This typically won't be a playbook that
 puts the system into a known state but rather something that performs a task
 such as mail sync.
 
+ssh_key_add
+
+This script provides a wrapper for adding named SSH keys to your SSH agent.
+I deliberately named the script with underscores to make it easier to
+tab-complete.
+
 toggle_service
 
 This script simply toggles a service and tells you whether or not it was
