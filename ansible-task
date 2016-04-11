@@ -2,7 +2,7 @@
 
 cd /usr/local/src/ansible
 
-task_name="$1"
+task_name="${1}"
 shift
 
 ansible-playbook --skip-tags=setup $@ playbooks/task/${task_name}.yml
