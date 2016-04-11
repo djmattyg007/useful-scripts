@@ -1,8 +1,8 @@
 A collection of random, useful scripts that I use in various places.
 
 Most of these scripts are primarily targeted towards Arch Linux systems, which
-means the shebangs may not be suitable for all systems. There shouldn't be
-anything preventing their use on other distributions though.
+means some of the shebangs may not be suitable for all systems. There shouldn't
+be anything preventing their use on other distributions though.
 
 Unless otherwise stated, all code within this repository is released into the
 public domain without any warranty.
@@ -34,3 +34,7 @@ toggle_service
 This script simply toggles a service and tells you whether or not it was
 successful. It does not use sudo - instead, it assumes you have polkit
 configured correctly.
+
+woodo
+
+It's a weird tree.
