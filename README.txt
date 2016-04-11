@@ -15,6 +15,11 @@ This script runs a "task" playbook. This typically won't be a playbook that
 puts the system into a known state but rather something that performs a task
 such as mail sync.
 
+blockip
+
+This adds a basic rule to iptables that drops all incoming traffic from a
+particular IP address.
+
 find-replace
 
 This implements a basic find+replace for the terminal. I've found that ~80% of
