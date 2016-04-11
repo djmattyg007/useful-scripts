@@ -1,5 +1,9 @@
 A collection of random, useful scripts that I use in various places.
 
+Most of these scripts are primarily targeted towards Arch Linux systems, which
+means the shebangs may not be suitable for all systems. There shouldn't be
+anything preventing their use on other distributions though.
+
 Unless otherwise stated, all code within this repository is released into the
 public domain without any warranty.
 
