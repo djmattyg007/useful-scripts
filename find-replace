@@ -1,0 +1,23 @@
+#!/usr/bin/php
+<?php
+
+set_error_handler(function($errno, $errstr) { echo "$errstr\n"; die(1); });
+
+$filename = $argv[1];
+$search = $argv[2];
+$replacement = $argv[3];
+
+if ($filename === "-") {
+    $file = file_get_contents("php://stdin");
+} else {
+    $file = file_get_contents($filename);
+}
+$newfile = str_replace($search, $replacement, $file);
+
+if ($filename === "-") {
+    echo "$newfile";
+} elseif (empty($argv[4]) || $argv[4] !== "--dry-run") {
+    file_put_contents($filename, $newfile);
+} else {
+    echo "$newfile\n";
+}

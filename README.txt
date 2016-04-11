@@ -15,6 +15,14 @@ This script runs a "task" playbook. This typically won't be a playbook that
 puts the system into a known state but rather something that performs a task
 such as mail sync.
 
+find-replace
+
+This implements a basic find+replace for the terminal. I've found that ~80% of
+the time when people think they want to use sed, they actually want to use
+their editor's find+replace functionality. This script provides that.
+TODO: Add usage note
+TODO: Think about rewriting in python
+
 ssh_key_add
 
 This script provides a wrapper for adding named SSH keys to your SSH agent.
