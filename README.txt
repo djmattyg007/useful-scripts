@@ -2,3 +2,17 @@ A collection of random, useful scripts that I use in various places.
 
 Unless otherwise stated, all code within this repository is released into the
 public domain without any warranty.
+
+Below is a list of scripts contained within this repository.
+
+ansible-task
+
+This script runs a "task" playbook. This typically won't be a playbook that
+puts the system into a known state but rather something that performs a task
+such as mail sync.
+
+toggle_service
+
+This script simply toggles a service and tells you whether or not it was
+successful. It does not use sudo - instead, it assumes you have polkit
+configured correctly.
