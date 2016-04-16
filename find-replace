@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-set_error_handler(function($errno, $errstr) { echo "$errstr\n"; die(1); });
+set_error_handler(function($errno, $errstr) { fwrite(STDERR, "$errstr\n"); die(1); });
 
 $filename = $argv[1];
 $search = $argv[2];
