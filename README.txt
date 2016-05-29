@@ -15,6 +15,10 @@ This script runs a "task" playbook. This typically won't be a playbook that
 puts the system into a known state but rather something that performs a task
 such as mail sync.
 
+base64_url
+
+This script makes it easier to base64 encode and decode URL encoded values.
+
 blockip
 
 This adds a basic rule to iptables that drops all incoming traffic from a
