@@ -7,7 +7,8 @@ be anything preventing their use on other distributions though.
 Unless otherwise stated, all code within this repository is released into the
 public domain without any warranty.
 
-Below is a list of scripts contained within this repository.
+Below is a list of scripts contained within this repository (in alphabetical
+order).
 
 ansible-task
 
@@ -37,6 +38,18 @@ ssh_key_add
 This script provides a wrapper for adding named SSH keys to your SSH agent.
 I deliberately named the script with underscores to make it easier to
 tab-complete.
+
+systemctl_stop_machine.py
+
+This script is designed to gracefully stop nspawn containers that run their
+own init processes that are not systemd (such as runit or s6-overlay). The
+naive approach to this problem is to have an ExecStop= line in your service
+unit that calls 'machinectl kill machine --kill-who=leader'. Unfortunately,
+this doesn't wait for the process to terminate. Instead, it exits immediately,
+and systemd then thinks the main process has not terminated and kills all
+the processes within the container immediately. This script runs the above
+machinectl command, then actually waits for the process to terminate before
+exiting.
 
 toggle_service
 
