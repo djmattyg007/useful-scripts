@@ -25,6 +25,10 @@ blockip
 This adds a basic rule to iptables that drops all incoming traffic from a
 particular IP address.
 
+dialog_menu.sh
+
+This is an example script on how to use the dialog command.
+
 find-replace
 
 This implements a basic find+replace for the terminal. I've found that ~80% of
