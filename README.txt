@@ -45,15 +45,10 @@ tab-complete.
 
 systemctl_stop_machine.py
 
-This script is designed to gracefully stop nspawn containers that run their
-own init processes that are not systemd (such as runit or s6-overlay). The
-naive approach to this problem is to have an ExecStop= line in your service
-unit that calls 'machinectl kill machine --kill-who=leader'. Unfortunately,
-this doesn't wait for the process to terminate. Instead, it exits immediately,
-and systemd then thinks the main process has not terminated and kills all
-the processes within the container immediately. This script runs the above
-machinectl command, then actually waits for the process to terminate before
-exiting.
+This script has been removed in favour of the new nspawn-stop program
+provided by my nspawn-tools package:
+https://github.com/djmattyg007/nspawn-tools
+nspawn-stop behaves almost identically to how the original behaved.
 
 toggle_service
 
